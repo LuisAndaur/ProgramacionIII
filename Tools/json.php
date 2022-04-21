@@ -19,7 +19,7 @@
                 echo $json .PHP_EOL;
                 fwrite($file, $json);
                 $exito = true;
-            }     
+            }
 
             fclose($file);
             return $exito;
