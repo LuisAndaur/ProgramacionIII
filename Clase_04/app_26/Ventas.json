@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 3549,
+        "_codProducto": "12345678",
+        "_idUsuario": 7275,
+        "_cantidad": 20
+    },
+    {
+        "_id": 7867,
+        "_codProducto": "12345678",
+        "_idUsuario": 7275,
+        "_cantidad": 50
+    },
+    {
+        "_id": 2643,
+        "_codProducto": "55555678",
+        "_idUsuario": 1099,
+        "_cantidad": 45
+    }
+]

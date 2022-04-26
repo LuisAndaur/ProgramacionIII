@@ -13,7 +13,7 @@
             }
         }
 
-        function getId(){
+        public function getId(){
             return $this->_id;
         }
 
@@ -84,16 +84,16 @@
             return $usuario;
         }
 
-        private static function ListaUsuarios($usuarios=array()):bool{
+        public static function ListaUsuarios($usuarios=array()):bool{
             $exito = false;
             echo "<ul>";
             foreach ($usuarios as $usuario) {
-                echo "<li>".$usuario->getId()."</li>";
-                echo "<li>".$usuario->getNombre()."</li>";
-                echo "<li>".$usuario->getClave()."</li>";
-                echo "<li>".$usuario->getMail()."</li>";
-                echo "<li>".$usuario->getFechaRegistro()."</li>";
-                echo "<li><img src='".$usuario->getImg()."'></li>";
+                echo "<li>".$usuario["_id"]."</li>";
+                echo "<li>".$usuario["_nombre"]."</li>";
+                echo "<li>".$usuario["_clave"]."</li>";
+                echo "<li>".$usuario["_mail"]."</li>";
+                echo "<li>".$usuario["_fechaRegistro"]."</li>";
+                echo "<li><img src='".$usuario["_img"]."'></li>";
                 $exito = true;
             }
             echo "</ul>";
@@ -163,19 +163,21 @@
                     if($user->getMail()==$usuario->getMail()){
                         if($user->getClave()==$usuario->getClave()){
                             $respuesta = "Verificado";
-                            return $respuesta;
+                            break;
                         }
                         else{
                             $respuesta = "Error en los datos";
-                            return $respuesta;
+                            break;
                         }
                     }
                     else{
                         $respuesta = "Usuario no registrado";
+                        break;
                     }
                 }
             }
             return $respuesta;
-        }        
+        }
+
     }
 ?>

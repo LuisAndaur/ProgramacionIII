@@ -1,0 +1,26 @@
+[
+    {
+        "_id": 4300,
+        "_nombre": "Yerba",
+        "_codigo": "12345678",
+        "_tipo": "solido",
+        "_stock": 50,
+        "_precio": 565.6
+    },
+    {
+        "_id": 6902,
+        "_nombre": "Azucar",
+        "_codigo": "55555678",
+        "_tipo": "solido",
+        "_stock": 105,
+        "_precio": 165.6
+    },
+    {
+        "_id": 8271,
+        "_nombre": "Galletas",
+        "_codigo": "11111111",
+        "_tipo": "solido",
+        "_stock": 60,
+        "_precio": 75.1
+    }
+]

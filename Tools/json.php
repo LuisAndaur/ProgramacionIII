@@ -9,7 +9,7 @@
          * @param string $nombreArchivo Nombre del archivo.
          * @return boolean True si el archivo se guardo satisfactoriamente, false caso contrario.
          */
-        public static function GuardarJSON($infoArray, $nombreArchivo="Usuarios.json"):bool{
+        public static function GuardarJSON($infoArray, $nombreArchivo):bool{
             $exito = false;
 
             $file = fopen($nombreArchivo, "w");
@@ -31,7 +31,7 @@
          * @param string $nombreArchivo Nombre del archivo a leer.
          * @return array El array con la info.
          */
-        public static function LeerJson($nombreArchivo="Usuarios.json"):array{
+        public static function LeerJson($nombreArchivo):array{
             $info = array();
             
             $archivo = fopen($nombreArchivo, "r");
