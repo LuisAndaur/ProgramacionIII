@@ -79,14 +79,30 @@
             return $this->_localidad;
         }
 
-        function __construct($id,$nombre,$apellido,$clave,$mail,$fechaRegistro,$localidad){
-            $this->setId($id);
-            $this->setNombre($nombre);
-            $this->setApellido($apellido);
-            $this->setClave($clave);
-            $this->setMail($mail);
-            $this->setFechaRegistro($fechaRegistro);
-            $this->setlocalidad($localidad);
+        // function __construct($id,$nombre,$apellido,$clave,$mail,$fechaRegistro,$localidad){
+        //     $this->setId($id);
+        //     $this->setNombre($nombre);
+        //     $this->setApellido($apellido);
+        //     $this->setClave($clave);
+        //     $this->setMail($mail);
+        //     $this->setFechaRegistro($fechaRegistro);
+        //     $this->setlocalidad($localidad);
+        // }
+
+        function __construct(){
+
+        }
+
+        public static function CrearUsuario($id,$nombre,$apellido,$clave,$mail,$fechaRegistro,$localidad){
+            $usuario = new Usuario();
+            $usuario->setId($id);
+            $usuario->setNombre($nombre);
+            $usuario->setApellido($apellido);
+            $usuario->setClave($clave);
+            $usuario->setMail($mail);
+            $usuario->setFechaRegistro($fechaRegistro);
+            $usuario->setLocalidad($localidad);
+            return $usuario;
         }
 
         public static function AltaUsuario($nombre,$apellido,$clave,$mail,$fechaRegistro,$localidad):bool{
@@ -104,18 +120,40 @@
 
         public static function ListaUsuarios($usuarios=array()):bool{
             $exito = false;
-            echo "<ul>";
-            foreach ($usuarios as $usuario) {
-                echo "<li>".$usuario["_id"]."</li>";
-                echo "<li>".$usuario["_nombre"]."</li>";
-                echo "<li>".$usuario["_apellido"]."</li>";
-                echo "<li>".$usuario["_clave"]."</li>";
-                echo "<li>".$usuario["_mail"]."</li>";
-                echo "<li>".$usuario["_fechaRegistro"]."</li>";
-                echo "<li>".$usuario["_localidad"]."</li>";
+            $usuariosSql = array();
+            $usuariosSql = UsuarioSql::getAllUsuarios();
+            //var_dump($usuariosSql).PHP_EOL;
+            if ($usuarios == array()) {
+                echo "<ul>";
+                foreach ($usuariosSql as $item) {
+                    $usuario = Usuario::CrearUsuario($item["id"],$item["nombre"],$item["apellido"],$item["clave"],$item["mail"],$item["fecha_de_registro"],$item["localidad"]);
+                    echo "<li>".$usuario->getId()."</li>";
+                    echo "<li>".$usuario->getNombre()."</li>";
+                    echo "<li>".$usuario->getApellido()."</li>";
+                    echo "<li>".$usuario->getClave()."</li>";
+                    echo "<li>".$usuario->getMail()."</li>";
+                    echo "<li>".$usuario->getFechaRegistro()."</li>";
+                    echo "<li>".$usuario->getLocalidad()."</li>";
+                }
+                echo "</ul>";
                 $exito = true;
             }
-            echo "</ul>";
+            else{
+                echo "<ul>";
+                foreach ($usuarios as $item) {
+                    $usuario = Usuario::CrearUsuario($item["id"],$item["nombre"],$item["apellido"],$item["clave"],$item["mail"],$item["fecha_de_registro"],$item["localidad"]);
+                    echo "<li>".$usuario->getId()."</li>";
+                    echo "<li>".$usuario->getNombre()."</li>";
+                    echo "<li>".$usuario->getApellido()."</li>";
+                    echo "<li>".$usuario->getClave()."</li>";
+                    echo "<li>".$usuario->getMail()."</li>";
+                    echo "<li>".$usuario->getFechaRegistro()."</li>";
+                    echo "<li>".$usuario->getLocalidad()."</li>";
+                }
+                echo "</ul>";
+                $exito = true;
+            }
+            
             return $exito;
         }
 

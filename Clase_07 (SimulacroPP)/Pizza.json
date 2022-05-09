@@ -1,0 +1,23 @@
+[
+    {
+        "_id": 4968,
+        "_sabor": "Muzza",
+        "_precio": 700,
+        "_tipo": "Piedra",
+        "_cantidad": 15
+    },
+    {
+        "_id": 3657,
+        "_sabor": "Fugazza",
+        "_precio": 70,
+        "_tipo": "Molde",
+        "_cantidad": 7
+    },
+    {
+        "_id": 6542,
+        "_sabor": "Napo",
+        "_precio": 860,
+        "_tipo": "Molde",
+        "_cantidad": 10
+    }
+]

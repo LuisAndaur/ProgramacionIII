@@ -7,7 +7,7 @@ class AccesoDatos
     private function __construct()
     {
         try { 
-            $this->objetoPDO = new PDO('mysql:host=localhost;dbname=tp_7_mysql;charset=utf8', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $this->objetoPDO = new PDO('mysql:host=localhost;dbname=clase_6;charset=utf8', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             $this->objetoPDO->exec("SET CHARACTER SET utf8");
             } 
         catch (PDOException $e) { 
@@ -16,21 +16,20 @@ class AccesoDatos
         }
     }
  
-    public function RetornarConsulta($sql)
-    { 
+    public function RetornarConsulta($sql){ 
         return $this->objetoPDO->prepare($sql); 
     }
-     public function RetornarUltimoIdInsertado()
-    { 
+
+
+    public function RetornarUltimoIdInsertado(){ 
         return $this->objetoPDO->lastInsertId(); 
     }
  
-    public static function dameAcceso()
-    { 
+    public static function DameAcceso(){ 
         if (!isset(self::$ObjetoAccesoDatos)) {          
             self::$ObjetoAccesoDatos = new AccesoDatos(); 
         } 
-        return self::$ObjetoAccesoDatos;        
+        return self::$ObjetoAccesoDatos;   
     }
  
  
