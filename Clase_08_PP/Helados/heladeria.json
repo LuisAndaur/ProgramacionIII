@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "sabor": "frutilla",
+        "precio": 80,
+        "tipo": "agua",
+        "stock": 13,
+        "imagen": "frutillaagua.jpg"
+    },
+    {
+        "id": 2,
+        "sabor": "mantecol",
+        "precio": 35,
+        "tipo": "crema",
+        "stock": 21,
+        "imagen": "frutillaagua.jpg"
+    },
+    {
+        "id": 3,
+        "sabor": "anana",
+        "precio": 45,
+        "tipo": "crema",
+        "stock": 34,
+        "imagen": "ananaagua.jpg"
+    },
+    {
+        "id": 4,
+        "sabor": "crema",
+        "precio": 65,
+        "tipo": "agua",
+        "stock": 17,
+        "imagen": "cremaagua.jpg"
+    },
+    {
+        "id": 5,
+        "sabor": "limon",
+        "precio": 80,
+        "tipo": "agua",
+        "stock": 26,
+        "imagen": "limonagua.jpg"
+    }
+]

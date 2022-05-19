@@ -1,7 +1,7 @@
 <?php
-    include_once('../datos/accesoDatos.php');
-    include_once('usuario.php');
-    class usuarioSql{        
+    include_once('./conexion/accesoDatos.php');
+    include_once('./modelo/usuario.php');
+    class UsuarioSql{        
 
         public static function insertarUsuario($usuario){
             $pdo = AccesoDatos::dameAcceso();

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nombre": "Big",
+        "precio": 6000,
+        "tipo": "doble",
+        "cantidad": 25,
+        "imagen": "Bigdoble.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Cuarto",
+        "precio": 700,
+        "tipo": "simple",
+        "cantidad": 20,
+        "imagen": "Cuartosimple.jpg"
+    }
+]
