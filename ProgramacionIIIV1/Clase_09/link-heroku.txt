@@ -1,0 +1,11 @@
+link:
+https://slim-php-heroku-la.herokuapp.com/usuarios/
+
+
+remoteMySql:
+https://remotemysql.com/phpmyadmin/sql.php?db=Rvq9Fjbk86&table=usuarios&pos=0
+
+strat localhost
+php -S localhost:666 -t app
+
+http://localhost:666/

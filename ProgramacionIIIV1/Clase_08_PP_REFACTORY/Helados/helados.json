@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "sabor": "frutilla",
+        "precio": 40.4,
+        "tipo": "agua",
+        "stock": 3,
+        "imagen": "frutillaagua.jpg"
+    },
+    {
+        "id": 2,
+        "sabor": "limon",
+        "precio": 75.2,
+        "tipo": "agua",
+        "stock": 5,
+        "imagen": "limonagua.jpg"
+    },
+    {
+        "id": 3,
+        "sabor": "mango",
+        "precio": 5.1,
+        "tipo": "agua",
+        "stock": 3,
+        "imagen": "mangoagua.jpg"
+    },
+    {
+        "id": 4,
+        "sabor": "chocolate",
+        "precio": 80,
+        "tipo": "crema",
+        "stock": 26,
+        "imagen": "chocolatecrema.jpg"
+    }
+]
